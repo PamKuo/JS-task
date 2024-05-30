@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作業</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center mb-3">
+            <div class="col-8 ">Q1: 請製作一個電影票價系統，讓使用者輸入年齡及人數，參照以下規則在螢幕輸出對應的單張票價與總金額：
+                一、滿2歲到12歲以下為兒童票，票價200元。
+                二、滿12歲以上到65歲以下為全票，票價300元。
+                三、滿65歲以上為愛心敬老票，票價150元。
+                ※須設定各項防呆驗證。</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-6">
+                <div class="mb-3">
+                    <label for="" class="form-label">輸入年齡</label>
+                    <input type="number" class="form-control" id="age" placeholder="2歲以上">
+                </div>
+                <div class="mb-3">
+                    <label for="" class="form-label">輸入幾張票</label>
+                    <input type="number" class="form-control" id="ticket">
+                </div>
+                <button class="btn btn-success mb-3" id="ok_btn">確認</button>
+                <button class="btn btn-info mb-3" id="resetBtn1">取消</button>
+                <div class="mb-3">
+                    <label for="details" class="form-label">明細: 數量&價格&總價格</label>
+                    <div class="form-control p-3" id="showmsg" disabled style="background-color: lightgray;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row justify-content-center mb-3">
+            <div class="col-8 mb-3">Q2: .反轉陣列
+                將一個陣列裡的所有元素值反轉過來！
+                例如：
+                const friends = ["David", "John", "Thor", "Tom", "Lily"];
+                會變成
+                ["Lily", "Tom", "Thor", "John", "David"]; </div>
+            <div class="col-6">
+                <div class="mb-3">
+                    <label for="originalArray" class="form-label">原始陣列</label>
+                    <div id="originalArray" class="form-control p-3" style="height: auto;" ></div>
+                </div>
+                <button class="btn btn-warning mb-3" id="reverseBtn">反轉陣列</button>
+                <button class="btn btn-info mb-3" id="resetBtn2">取消</button>
+                <div class="mb-3">
+                    <label for="reversedArray" class="form-label">反轉後的陣列</label>
+                    <div id="reversedArray" class="form-control p-3" style="background-color: lightgray;">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row justify-content-center mb-3">
+            <div class="col-8 mb-3">Q3: 找出最大值
+                寫一個函式，參數是一個數字陣列。這個函式要回傳陣列當中最大的數字！ 若
+                是呼叫時是空陣列，則回傳 undefined。例如：
+                findBig([15, 20, 32, 26, 7]); // return 32
+                findBig([1, 30, 25, 47, 19, 51, 83, 75, 60]); // return 83
+                findBig([-11, 0, -1, -14, -25, -29]); // return 0
+                findBig([]); // return undefined </div>
+            <div class="col-6">
+                <div class="mb-3">
+                    <label for="numberArray" class="form-label">輸入數字陣列（用逗號分隔）</label>
+                    <input type="text" class="form-control" id="numberArray" placeholder="例如：15, 20, 32, 26, 7">
+                </div>
+                <button class="btn btn-danger mb-3" id="findMaxBtn">確認</button>
+                <button class="btn btn-info mb-3" id="resetBtn3">取消</button>
+                <div class="mb-3">
+                    <label for="maxResult" class="form-label">最大值</label>
+                    <div id="maxResult" class="form-control p-3" style="background-color: lightgray;"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row justify-content-center mb-3">
+            <div class="col-8 mb-3">Q4: 數值加總
+                addUp() 這個函式有大於 0 的參數 n，n 為一個正整數。 addUp() 要 回傳 1
+                + 2 + 3 + ..... + n 的值。例如：
+                addUp(10) = 1 + 2 + 3 + 4 + 5 + ....... + 10 = 55
+                addUp(100) = 1 + 2 + 3 + 4 + 5 + ....... + 100 = 5050
+                addUp(10); // 55
+                addUp(100); // 5050
+                addUp(10000); // 50005000
+                addUp(50000); // 1250025000 </div>
+            <div class="col-6">
+                <div class="mb-3">
+                    <label for="numberInput" class="form-label">輸入正整數</label>
+                    <input type="number" class="form-control" id="numberInput" placeholder="例如：10, 100, 10000">
+                </div>
+                <button class="btn btn-primary mb-3" id="calculateBtn">計算</button>
+                <button class="btn btn-info mb-3" id="resetBtn4">取消</button>
+                <div class="mb-3">
+                    <label for="sumResult" class="form-label">加總結果</label>
+                    <div id="sumResult" class="form-control p-3" style="background-color: lightgray;"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./script.js"></script>
+    <script>
+        // Q1
+        $(function () {
+            $("#ok_btn").click(function () {
+                let age = $("#age").val();
+                let ticketCount = $("#ticket").val();
+
+                if (age === "" || age <= 0) {
+                    alert("請輸入有效的年齡");
+                    return;
+                }
+
+                if (ticketCount === "" || ticketCount <= 0) {
+                    alert("請輸入有效的票數");
+                    return;
+                }
+
+                // 將年齡和票數轉換為整數
+                age = parseInt(age);
+                ticketCount = parseInt(ticketCount);
+                //parseInt()可以把字串變成數字的函數。
+
+                if (isNaN(age) || isNaN(ticketCount)) {
+                    alert("請輸入有效的數字");
+                    return;
+                }
+
+                //根據年齡計算單張票價
+                let ticketPrice;
+                let ticketType;
+                switch (true) {
+                    case (age >= 2 && age < 12):
+                        ticketPrice = 200;
+                        ticketType = "兒童票";
+                        break;
+                    case (age >= 12 && age < 65):
+                        ticketPrice = 300;
+                        ticketType = "全票";
+                        break;
+                    case (age >= 65):
+                        ticketPrice = 150;
+                        ticketType = "愛心敬老票";
+                        break;
+                    default:
+                        alert("年齡不在有效範圍內");
+                        return;
+                }
+
+                //算金額
+                let totalPrice = ticketPrice * ticketCount;
+
+                //明細框框
+                $("#showmsg").html("購買數量: " + ticketCount + " 張</br>身份：" + ticketType + "</br>單張票價: " + ticketPrice + " 元</br>總金額: " + totalPrice + " 元");
+            })
+        });
+
+        $("#resetBtn1").click(function () {
+            $("#age").val("");
+            $("#ticket").val("");
+            $("#showmsg").html("");
+        });
+
+        // Q2
+        // 自定義反轉方法
+        Array.prototype.reverseFriends = function () {
+            let result = [];
+            for (let i = this.length - 1; i >= 0; i--) {
+                result.push(this[i]);
+            }
+            return result;
+        }
+
+        $(function () {
+            const friends = ["David", "John", "Thor", "Tom", "Lily"];
+
+            // 顯示原始陣列
+            $("#originalArray").html(friends.join(", "));
+
+            // 點擊按鈕反轉陣列
+            $("#reverseBtn").click(function () {
+                let reversedFriends = friends.reverseFriends();
+                $("#reversedArray").html(reversedFriends.join(", "));
+            });
+
+            $("#resetBtn2").click(function () {
+                $("#reversedArray").html("");
+            });
+        });
+
+        // Q3
+        $(function () {
+            //定義找出最大值
+            function findBig(arr) {
+                if (arr.length === 0) {
+                    return undefined;
+                }
+                let max = arr[0];
+                for (let i = 1; i < arr.length; i++) {
+                    if (arr[i] > max) {
+                        max = arr[i];
+                    }
+                }
+                return max;
+            }
+            $("#findMaxBtn").click(function () {
+                let numberArray = $("#numberArray").val();
+
+                if (numberArray === "") {
+                    // 如果輸入框為空，直接顯示 undefined
+                    $("#maxResult").html("undefined");
+                    return;
+                }
+
+                let arr = numberArray.split(',').map(Number);
+
+                // split() 方法可以用來根據你指定的分隔符號，將字串切割成一個字串陣列。
+                //map() 方法 呼叫函式 的話，就可以讓陣列中 每個元素執行完該函式 後，將每個元素的執行結果 回傳到一個新的陣列 。
+
+                if (arr.some(isNaN)) {
+                    alert("請確保輸入的是有效的數字");
+                    return;
+                }
+
+                let maxNumber = findBig(arr);
+                $("#maxResult").html(maxNumber !== undefined ? maxNumber : "undefined");
+            });
+
+            $("#resetBtn3").click(function () {
+                $("#numberArray").val("");  
+                $("#maxResult").html("");  
+            });
+
+        });
+
+        // Q4
+        $(function () {
+            // 定義計算加總的函式
+            function addUp(n) {
+                let sum = 0;
+                for (let i = 1; i <= n; i++) {
+                    sum = sum + i; // sum += i;
+                }
+                return sum;
+            }
+            
+            $("#calculateBtn").click(function () {
+                let numberInput = $("#numberInput").val();
+
+                if (!Number.isInteger(Number(numberInput)) || Number(numberInput) <= 0) {
+                    alert("請輸入有效的正整數");
+                    return;
+                }
+                // Number.isInteger() 函式: 這個方法檢查輸入的值，是否為整數。
+
+                let n = parseInt(numberInput);
+                let sum = addUp(n);
+
+                let str = "addUp(" + n + ") = ";
+                let arr = [];
+                for (let i = 1; i <= n; i++) {
+                    arr.push(i);
+                }
+                let joined = arr.join('+');
+                str += joined + " = " + sum;
+                $("#sumResult").html(str);
+            });
+           
+            $("#resetBtn4").click(function () {
+                $("#numberInput").val(""); 
+                $("#sumResult").html(""); 
+            });
+        });
+
+    </script>
+</body>
+
+</html>
